@@ -60,6 +60,12 @@ function addImage(){
 	ctx.drawImage(img,10,10, c.width, c.height);
 }
 
+function clearCanvas(){
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.clearRect(0,0,c.width,c.height);
+}
+
 </script>
 
 
@@ -94,11 +100,14 @@ function addImage(){
 	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"> </canvas>
 
 	<a onclick="drawRectangle();" class="w3-btn w3-black"> Draw Rectangle</a>
+	
 	<a onclick="drawName();" class="w3-btn w3-black"> Draw Name</a>
 
 	<img id="myImage" src="https://assets.eflorist.com/site/56390200/assets/products/PSM_/sku13045012.jpg?1732981554358" alt="flower" style="display:none;">
 	<a onclick="addImage();" class="w3-btn w3-black"> Add Picture</a>
-		
+	
+	<a onclick="clearCanvas();" class="w3-btn w3-black"> Clear</a>
+	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
