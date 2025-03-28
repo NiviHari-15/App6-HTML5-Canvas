@@ -40,30 +40,30 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 function drawRectangle(){
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.strokeStyle = "black";
-	ctx.strokeRect(10,10,150,80);
+	var c = document.getElementById("myCanvas"); // accesses the canvas element on the web page
+	var ctx = c.getContext("2d"); // allows us to draw 2D graphics on the canvas
+	ctx.strokeStyle = "black"; // makes the color of the lines drawn black
+	ctx.strokeRect(10,10,150,80); // draws a rectangle starting from the (10,10) position with width 150 pixels and height 80 pixels
 }
 	
 function drawName(){
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.font = "30px Arial";
-	ctx.fillText("Nivi", 10, 50);
+	var c = document.getElementById("myCanvas"); // accesses the canvas element on the web page
+	var ctx = c.getContext("2d"); // allows us to draw 2D graphics on the canvas
+	ctx.font = "30px Arial"; // makes the font for the text written on the canvas Arial in size 30
+	ctx.fillText("Nivi", 10, 50); // writes my name on the canvas
 }
 
 function addImage(){
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	var img = document.getElementById("myImage");
-	ctx.drawImage(img,10,10, c.width, c.height);
+	var c = document.getElementById("myCanvas"); // accesses the canvas element on the web page
+	var ctx = c.getContext("2d"); // allows us to draw 2D graphics on the canvas
+	var img = document.getElementById("myImage"); // accesses the element myImage which is defined later in the code and stores it in the variable img
+	ctx.drawImage(img,10,10, c.width, c.height); // adds the image to the canvas and resizes the image to fit within the borders of the canvas
 }
 
 function clearCanvas(){
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.clearRect(0,0,c.width,c.height);
+	var c = document.getElementById("myCanvas"); // accesses the canvas element on the web page
+	var ctx = c.getContext("2d"); // allows us to draw 2D graphics on the canvas
+	ctx.clearRect(0,0,c.width,c.height); // clears the canvas of the image, text, and rectangle
 }
 
 </script>
@@ -97,16 +97,16 @@ function clearCanvas(){
 	
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
-	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"> </canvas>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"> </canvas> <!-- creates canvas on web page -->
 
-	<a onclick="drawRectangle();" class="w3-btn w3-black"> Draw Rectangle</a>
+	<a onclick="drawRectangle();" class="w3-btn w3-black"> Draw Rectangle</a> <!-- creates button which calls the drawRectangle() function and draws a rectangle on the canvas -->
 	
-	<a onclick="drawName();" class="w3-btn w3-black"> Draw Name</a>
+	<a onclick="drawName();" class="w3-btn w3-black"> Draw Name</a> <!-- creates button which calls the drawName() function and adds the text Nivi to the canvas -->
 
-	<img id="myImage" src="https://assets.eflorist.com/site/56390200/assets/products/PSM_/sku13045012.jpg?1732981554358" alt="flower" style="display:none;">
-	<a onclick="addImage();" class="w3-btn w3-black"> Add Picture</a>
+	<img id="myImage" src="https://assets.eflorist.com/site/56390200/assets/products/PSM_/sku13045012.jpg?1732981554358" alt="flower" style="display:none;"> <!-- creates the myImage element, sets the source of the image as the specified link, and ensures the image is not displayed on the page unless added to the canvas via clicking the button -->
+	<a onclick="addImage();" class="w3-btn w3-black"> Add Picture</a> <!-- creates the button which calls the addImage() function and adds a pictre of flowers to the canvas -->
 	
-	<a onclick="clearCanvas();" class="w3-btn w3-black"> Clear</a>
+	<a onclick="clearCanvas();" class="w3-btn w3-black"> Clear</a> <!-- creates the button which calls the clearCanvas() function and removes any additions to the canvas -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
